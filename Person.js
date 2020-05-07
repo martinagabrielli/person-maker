@@ -29,6 +29,7 @@ class Person {
         leftLeg = document.createElement('div');
         rightLeg = document.createElement('div');
 
+
         root.appendChild(container);
         container.appendChild(hair);
         container.appendChild(head);
@@ -55,6 +56,11 @@ class Person {
     }
     greet() {
         console.log('hello world!');
+        let greetBox = null;
+        greetBox = document.createElement('div');
+        greetBox.className = 'greet-box';
+        container.appendChild(greetBox);
+        greetBox.innerHTML = 'Hello World!';
         // return this;
     }
     walk() {
@@ -62,5 +68,3 @@ class Person {
         // return this;
     }
 }
-
-console.log();
