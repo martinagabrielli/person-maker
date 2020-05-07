@@ -17,6 +17,7 @@ class Person {
         let leftLeg = null;
         let rightLeg = null;
         let greetBtn = null;
+        let sayNameBtn = null;
 
         container = document.createElement('div');
         hair = document.createElement('div');
@@ -30,6 +31,7 @@ class Person {
         leftLeg = document.createElement('div');
         rightLeg = document.createElement('div');
         greetBtn = document.createElement('button');
+        sayNameBtn = document.createElement('button');
 
         root.appendChild(container);
         container.appendChild(hair);
@@ -43,6 +45,7 @@ class Person {
         container.appendChild(leftLeg);
         container.appendChild(rightLeg);
         container.appendChild(greetBtn);
+        container.appendChild(sayNameBtn);
 
         container.id = 'container';
         hair.className = 'hair';
@@ -56,13 +59,14 @@ class Person {
         leftLeg.className = 'leg left-leg';
         rightLeg.className = 'leg right-leg';
         greetBtn.id = 'greet-btn';
+        sayNameBtn.id = 'sayname-btn';
 
         greetBtn.innerHTML = 'Greet';
+        sayNameBtn.innerHTML = 'Say name';
 
         greetBtn.addEventListener('click', this.greet);
     }
     greet() {
-        console.log('hello world!');
         let greetBox;
         let mouth;
         greetBox = document.createElement('div');
