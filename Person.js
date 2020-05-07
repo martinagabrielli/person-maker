@@ -77,8 +77,7 @@ class Person {
             mouth.style.borderTop = 'none';
         }, 2000);
     }
-    walk() {
-        console.log('I\'m walking...');
+    sayName() {
         // return this;
     }
 }
