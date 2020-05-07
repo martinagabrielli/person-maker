@@ -16,6 +16,7 @@ class Person {
         let leftArm = null;
         let leftLeg = null;
         let rightLeg = null;
+        let greetBtn = null;
 
         container = document.createElement('div');
         hair = document.createElement('div');
@@ -28,7 +29,7 @@ class Person {
         rightArm = document.createElement('div');
         leftLeg = document.createElement('div');
         rightLeg = document.createElement('div');
-
+        greetBtn = document.createElement('button');
 
         root.appendChild(container);
         container.appendChild(hair);
@@ -41,6 +42,7 @@ class Person {
         container.appendChild(rightArm);
         container.appendChild(leftLeg);
         container.appendChild(rightLeg);
+        container.appendChild(greetBtn);
 
         container.id = 'container';
         hair.className = 'hair';
@@ -53,15 +55,27 @@ class Person {
         rightArm.className = 'arm right-arm';
         leftLeg.className = 'leg left-leg';
         rightLeg.className = 'leg right-leg';
+        greetBtn.id = 'greet-btn';
+
+        greetBtn.innerHTML = 'Greet';
+
+        greetBtn.addEventListener('click', this.greet);
     }
     greet() {
         console.log('hello world!');
-        let greetBox = null;
+        let greetBox;
+        let mouth;
         greetBox = document.createElement('div');
         greetBox.className = 'greet-box';
         container.appendChild(greetBox);
         greetBox.innerHTML = 'Hello World!';
-        // return this;
+        mouth = document.querySelector('.mouth');
+        mouth.style.borderTop = '2px solid red';
+
+        setTimeout(function() {
+            greetBox.style.display = 'none';
+            mouth.style.borderTop = 'none';
+        }, 2000);
     }
     walk() {
         console.log('I\'m walking...');
