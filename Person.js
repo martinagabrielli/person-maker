@@ -65,6 +65,16 @@ class Person {
         sayNameBtn.innerHTML = 'Say name';
 
         greetBtn.addEventListener('click', this.greet);
+        sayNameBtn.addEventListener('click', this.sayName);
+
+    }
+    get fullName() {
+         return `${this.name} ${this.surname}`;
+    }
+    set fullName(value) {
+        const parts = value.split(' ');
+        this.name = parts[0];
+        this.surname = parts[1];
     }
     greet() {
         let greetBox;
@@ -82,6 +92,20 @@ class Person {
         }, 2000);
     }
     sayName() {
-        // return this;
+        // console.log('hello');
+        let greetBox;
+        let mouth;
+        greetBox = document.createElement('div');
+        greetBox.className = 'greet-box';
+        container.appendChild(greetBox);
+        // greetBox.innerHTML = 
+        // console.log(this.fullName);
+        mouth = document.querySelector('.mouth');
+        mouth.style.borderTop = '2px solid red';
+
+        setTimeout(function() {
+            greetBox.style.display = 'none';
+            mouth.style.borderTop = 'none';
+        }, 2000);
     }
 }
