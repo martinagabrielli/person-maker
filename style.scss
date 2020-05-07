@@ -1,0 +1,108 @@
+* {
+    body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        #container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 50px;
+            .hair {
+                // background: black;
+                width: 50px;
+                height: 60px;
+                position: absolute;
+                top: 0;
+                border-top: 2px solid #6b5717;
+                border-left: 2px solid #6b5717;
+                border-right: 2px solid #6b5717;
+                border-radius: 50% 50% 0 0;
+                &:after {
+                    content: '';
+                    width: 50px;
+                    height: 61px;
+                    position: absolute;
+                    bottom: 0px;
+                    left: 1px;
+                    border-top: 2px solid #6b5717;
+                    border-left: 2px solid #6b5717;
+                    border-right: 2px solid #6b5717;
+                    border-radius: 50% 50% 0 0;
+                }
+            }
+            .head {
+                background: pink;
+                width: 50px;
+                height: 50px;
+                border-radius: 50%;
+                // border: 1px solid black;
+            }
+            .eye {
+                background: black;
+                width: 3px;
+                height: 3px;
+                border-radius: 50%;
+                position: absolute;
+                &.left-eye {
+                    top: 20px;
+                    right: 15px;
+                }
+                &.right-eye {
+                    top: 20px;
+                    left: 15px;
+                }
+            }
+            .mouth {
+                width: 5px;
+                height: 2px;
+                position: absolute;
+                top: 35px;
+                border-bottom: 2px solid red;
+                border-left: 2px solid red;
+                border-right: 2px solid red;
+                border-radius: 0 0 8px 8px;
+            }
+            .body {
+                background: black;
+                height: 50px;
+                width: 2px;
+            }
+            .arm {
+                background: black;
+                height: 2px;
+                width: 40px;
+                position: absolute;
+                &.left-arm {
+                    top: 70px;
+                    right: 25px;
+                    transform: rotate(-20deg);
+                }
+                &.right-arm {
+                    top: 70px;
+                    left: 25px;
+                    transform: rotate(20deg);
+                }
+            }
+            .leg {
+                background: black;
+                height: 2px;
+                width: 60px;
+                position: absolute;
+                &.left-leg {
+                    right: 16px;
+                    top: 121px;
+                    transform: rotate(-45deg);
+                }
+                &.right-leg {
+                    left: 16px;
+                    top: 121px;
+                    transform: rotate(45deg);
+                }
+            }
+        }
+    }
+}
