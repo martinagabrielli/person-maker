@@ -169,20 +169,27 @@
   margin-left: -18px;
 }
 
-* body #container #greet-btn {
+* body #container #greet-btn, * body #container #sayname-btn {
   border: 1px solid black;
   border-radius: 10px;
   position: absolute;
   width: 80px;
   height: 40px;
   right: 100px;
-  top: 0px;
   text-align: center;
   cursor: pointer;
-  font-size: 15px;
+  font-size: 14px;
 }
 
-* body #container #greet-btn:focus {
+* body #container #greet-btn:focus, * body #container #sayname-btn:focus {
   outline: none;
+}
+
+* body #container #greet-btn {
+  top: 0;
+}
+
+* body #container #sayname-btn {
+  top: 70px;
 }
 /*# sourceMappingURL=style.css.map */

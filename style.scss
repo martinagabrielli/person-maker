@@ -130,20 +130,25 @@
                     margin-left: -18px;
                 }
             }
-            #greet-btn {
+            #greet-btn, #sayname-btn {
                 border: 1px solid black;
                 border-radius: 10px;
                 position: absolute;
                 width: 80px;
                 height: 40px;
                 right: 100px;
-                top: 0px;
                 text-align: center;
                 cursor: pointer;
-                font-size: 15px;
+                font-size: 14px;
                 &:focus {
                     outline: none;
                 }
+            }
+            #greet-btn {
+                top: 0;
+            }
+            #sayname-btn {
+                top: 70px;
             }
         }
     }
