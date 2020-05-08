@@ -190,6 +190,7 @@
 }
 
 * body #container #sayname-btn {
+  height: 60px;
   top: 70px;
 }
 /*# sourceMappingURL=style.css.map */
