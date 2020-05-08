@@ -1,4 +1,8 @@
 class Person {
+    name = ""
+    surname = ""
+    age = 0
+
     constructor(name, surname, age) {
         this.name = name;
         this.surname = surname;
@@ -62,21 +66,18 @@ class Person {
         sayNameBtn.id = 'sayname-btn';
 
         greetBtn.innerHTML = 'Greet';
-        sayNameBtn.innerHTML = 'Say name';
+        sayNameBtn.innerHTML = 'What\'s your name?';
 
-        greetBtn.addEventListener('click', this.greet);
-        sayNameBtn.addEventListener('click', this.sayName);
+        greetBtn.addEventListener('click', () => {
+            this.greet();
+        });
+        sayNameBtn.addEventListener('click', () => {
+            this.sayName();
+        });
+    }
 
-    }
-    get fullName() {
-         return `${this.name} ${this.surname}`;
-    }
-    set fullName(value) {
-        const parts = value.split(' ');
-        this.name = parts[0];
-        this.surname = parts[1];
-    }
     greet() {
+        console.log(this);
         let greetBox;
         let mouth;
         greetBox = document.createElement('div');
@@ -91,15 +92,15 @@ class Person {
             mouth.style.borderTop = 'none';
         }, 2000);
     }
+    
     sayName() {
-        // console.log('hello');
+        console.log(this);
         let greetBox;
         let mouth;
         greetBox = document.createElement('div');
         greetBox.className = 'greet-box';
         container.appendChild(greetBox);
-        // greetBox.innerHTML = 
-        // console.log(this.fullName);
+        greetBox.innerHTML = `${this.name} ${this.surname}`;
         mouth = document.querySelector('.mouth');
         mouth.style.borderTop = '2px solid red';
 
